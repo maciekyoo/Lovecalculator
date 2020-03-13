@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <script src="https://kit.fontawesome.com/1ef0e1a309.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css?v=0.0002" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <title>Love calculator</title>
-</head>
-    <body class="bodyclass" background="backgroundimage.jpg">
+    <head>
+        <script src="https://kit.fontawesome.com/1ef0e1a309.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css?v=0.0002" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>Love calculator</title>
+    </head>
+    <body class="bodyclass">
         <header class="headerclass">
             <h2>Love calculator</h2>
         </header>
@@ -15,15 +15,12 @@
             <img class="serce" src="heart.jpg" alt="serce"/>
             <div class="centeredtext"></div>
         </div>
-        <div class="seximages">
-            <i class="fas fa-mars"></i>
-            <i class="fas fa-venus"></i>
-        </div>
         <div class="divinputclass">
-            <input type="text" id="Male" class="input input--left">
-            <button id="calculate" type="submit" class="button">Check</button>
-            <input type="text" id="Female" class="input">
+            <input type="text" id="Male" class="input input--left" placeholder="Write first name">
+            <input type="text" id="Female" class="input" placeholder="Write second name">
+            <button id="calculate" type="submit" class="button">Calculate Love Compatability</button>
         </div>
+        <div class="emptydiv"></div>
         <script>
             const btn = document.getElementById('calculate');
             const showPercentage = document.getElementsByClassName('centeredtext');
