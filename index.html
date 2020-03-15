@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js">
+        </script>
         <script src="https://kit.fontawesome.com/1ef0e1a309.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css?v=0.0002" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light&display=swap" rel="stylesheet">
@@ -27,21 +29,18 @@
             const maleinput = document.getElementById('Male');
             const femaleinput = document.getElementById('Female');
             btn.addEventListener('click', function() {
+                var inputVal = new Math.seedrandom(maleinput.value + femaleinput.value);
+                console.log(inputVal.quick());
                 if(/^[a-zA-z]+$/.test(maleinput.value) && /^[a-zA-z]+$/.test(femaleinput.value)){
-                    if(!maleinput.value || !femaleinput.value) {
-                        alert("you need to write names");
-                        return;
-                    }
-                    else {
-                        const randomizedValue = Math.floor(Math.random() * 101);
+                        const randomizedValue = Math.floor(inputVal.quick() * 101);
                         const fixedrandomizedValue = Math.round(randomizedValue);
                         showPercentage[0].innerText = fixedrandomizedValue + "%";
-                    }
                 }
                  else {
                     alert("write the name");
                     return;
                 }
+                
         });
         </script>
         <footer class="footer"><i class="fas fa-copyright"></i>Copyright Maciej Giłka</footer>
