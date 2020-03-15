@@ -30,9 +30,8 @@
             const femaleinput = document.getElementById('Female');
             var namesarray = [];
             btn.addEventListener('click', function() {
-                namesarray.push(maleinput.value);
-                namesarray.push(femaleinput.value);
-                console.log(namesarray.sort());
+                namesarray.push(maleinput.value.toLowerCase());
+                namesarray.push(femaleinput.value.toLowerCase());
                 var inputVal = new Math.seedrandom(namesarray.sort());
                 console.log(inputVal.quick());
                 if(/^[a-zA-z]+$/.test(maleinput.value) && /^[a-zA-z]+$/.test(femaleinput.value)){
@@ -45,9 +44,8 @@
                     return;
                 }
                 namesarray.length = 0;
-                
         });
         </script>
-        <footer class="footer"><i class="fas fa-copyright"></i>Copyright Maciej Giłka</footer>
+        <footer class="footer">&copy;Copyright Maciej Giłka</footer>
     </body>
 </html>
