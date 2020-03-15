@@ -28,8 +28,12 @@
             const showPercentage = document.getElementsByClassName('centeredtext');
             const maleinput = document.getElementById('Male');
             const femaleinput = document.getElementById('Female');
+            var namesarray = [];
             btn.addEventListener('click', function() {
-                var inputVal = new Math.seedrandom(maleinput.value + femaleinput.value);
+                namesarray.push(maleinput.value);
+                namesarray.push(femaleinput.value);
+                console.log(namesarray.sort());
+                var inputVal = new Math.seedrandom(namesarray.sort());
                 console.log(inputVal.quick());
                 if(/^[a-zA-z]+$/.test(maleinput.value) && /^[a-zA-z]+$/.test(femaleinput.value)){
                         const randomizedValue = Math.floor(inputVal.quick() * 101);
@@ -40,6 +44,7 @@
                     alert("write the name");
                     return;
                 }
+                namesarray.length = 0;
                 
         });
         </script>
